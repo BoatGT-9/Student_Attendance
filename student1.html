@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>รายชื่อการเข้าเรียน</h1>
+    <div id="add-form">
+        <label for="student-id">รหัสประจำตัว:</label>
+        <input type="text" id="student-id">
+        <label for="student-name">ชื่อ:</label>
+        <input type="text" id="student-name">
+        <button onclick="addStudent()">เพิ่มชื่อ</button>
+    </div>
+    <div id="search-form">
+        <label for="search">ค้นหาชื่อ:</label>
+        <input type="text" id="search" oninput="filterNames()">
+    </div>
+    <table id="attendance-table">
+        <thead>
+            <tr>
+                <th>รหัสประจำตัว</th>
+                <th>ชื่อ</th>
+                <th>สัปดาห์ 1</th>
+                <th>สัปดาห์ 2</th>
+                <th>สัปดาห์ 3</th>
+                <th>สัปดาห์ 4</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button onclick="exportTable()">Export ไฟล์</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
